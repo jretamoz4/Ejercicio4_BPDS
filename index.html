@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crítica: The Legend of Zelda</title>
+    <title>Críticas de Videojuegos</title>
     <style>
         /* --- Estilos Generales --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #1a1a1a; /* Fondo oscuro para temática de videojuegos */
+            background-color: #1a1a1a;
             color: #e0e0e0;
             margin: 0;
             padding: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
-        /* --- Contenedor Principal --- */
+        /* --- Contenedor para las tarjetas --- */
+        .reviews-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem; /* Espacio entre críticas */
+        }
+
+        /* --- Contenedor Principal de cada Crítica --- */
         .container {
             max-width: 850px;
             width: 100%;
@@ -27,12 +31,12 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             display: flex;
-            flex-direction: row; /* Cambiado a fila para layout de dos columnas */
+            flex-direction: row;
         }
 
         /* --- Columna de la Portada --- */
         .cover-column {
-            flex: 0 0 300px; /* Ancho fijo para la portada */
+            flex: 0 0 300px;
         }
         
         .game-cover {
@@ -60,7 +64,7 @@
         .section-title {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #4dd0e1; /* Un color de acento cian */
+            color: #4dd0e1;
             border-bottom: 2px solid #444;
             padding-bottom: 0.5rem;
             margin-top: 2rem;
@@ -75,11 +79,14 @@
         
         /* --- Responsividad para móviles --- */
         @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
             .container {
-                flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+                flex-direction: column;
             }
             .cover-column {
-                flex-basis: 300px; /* Altura fija para la imagen */
+                flex-basis: 300px;
             }
             .content-column {
                 padding: 2rem;
@@ -92,31 +99,49 @@
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- Columna de la Imagen de Portada -->
-        <div class="cover-column">
-            <img class="game-cover" src="https://m.media-amazon.com/images/M/MV5BMWQ0ZDhmODctMDhkYS00YTdhLWIxNDgtNjY0YWY1YTQ4ODBiXkEyXkFqcGc@._V1_.jpg" alt="Portada del videojuego The Legend of Zelda.">
+    <main class="reviews-wrapper">
+
+        <!-- Crítica 1: The Legend of Zelda -->
+        <div class="container">
+            <div class="cover-column">
+                <img class="game-cover" src="https://m.media-amazon.com/images/M/MV5BMWQ0ZDhmODctMDhkYS00YTdhLWIxNDgtNjY0YWY1YTQ4ODBiXkEyXkFqcGc@._V1_.jpg" alt="Portada del videojuego The Legend of Zelda.">
+            </div>
+            <div class="content-column">
+                <header>
+                    <h1 class="game-title">The Legend of Zelda</h1>
+                </header>
+                <main>
+                    <section>
+                        <h2 class="section-title">Resumen del Videojuego</h2>
+                        <p class="game-summary">
+                            Lanzado en 1986, "The Legend of Zelda" es un revolucionario juego de acción y aventura que sentó las bases para el género. El jugador controla al joven héroe Link, quien debe explorar el vasto reino de Hyrule para encontrar los ocho fragmentos de un artefacto sagrado conocido como la Trifuerza de la Sabiduría. Solo con ella podrá rescatar a la Princesa Zelda y derrotar al malvado Ganon, restaurando la paz en el reino.
+                        </p>
+                    </section>
+                </main>
+            </div>
         </div>
 
-        <!-- Columna del Contenido -->
-        <div class="content-column">
-            <header>
-                <!-- Nombre del videojuego -->
-                <h1 class="game-title">The Legend of Zelda</h1>
-            </header>
-            <main>
-                <!-- Resumen del videojuego -->
-                <section>
-                    <h2 class="section-title">Resumen del Videojuego</h2>
-                    <p class="game-summary">
-                        Lanzado en 1986, "The Legend of Zelda" es un revolucionario juego de acción y aventura que sentó las bases para el género. El jugador controla al joven héroe Link, quien debe explorar el vasto reino de Hyrule para encontrar los ocho fragmentos de un artefacto sagrado conocido como la Trifuerza de la Sabiduría. Solo con ella podrá rescatar a la Princesa Zelda y derrotar al malvado Ganon, restaurando la paz en el reino.
-                    </p>
-                </section>
-            </main>
+        <!-- Crítica 2: The Last of Us -->
+        <div class="container">
+            <div class="cover-column">
+                <!-- He seleccionado una portada más adecuada para el formato -->
+                <img class="game-cover" src="https://upload.wikimedia.org/wikipedia/en/4/46/The_Last_of_Us_Part_I_cover_art.jpg" alt="Portada del videojuego The Last of Us.">
+            </div>
+            <div class="content-column">
+                <header>
+                    <h1 class="game-title">The Last of Us</h1>
+                </header>
+                <main>
+                    <section>
+                        <h2 class="section-title">Resumen del Videojuego</h2>
+                        <p class="game-summary">
+                        </p>
+                    </section>
+                </main>
+            </div>
         </div>
 
-    </div>
+    </main>
 
 </body>
 </html>
