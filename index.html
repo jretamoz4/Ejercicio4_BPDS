@@ -4,160 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Críticas de Videojuegos</title>
-    <style>
-        /* --- Estilos Generales --- */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 2rem;
-        }
-
-        /* --- Contenedor para las tarjetas --- */
-        .reviews-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2.5rem; /* Espacio entre críticas */
-        }
-
-        /* --- Contenedor Principal de cada Crítica --- */
-        .container {
-            max-width: 850px;
-            width: 100%;
-            background-color: #262626;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-        }
-
-        /* --- Columna de la Portada --- */
-        .cover-column {
-            flex: 0 0 300px;
-        }
-        
-        .game-cover {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        /* --- Columna de Contenido --- */
-        .content-column {
-            padding: 2.5rem;
-            flex-grow: 1;
-        }
-
-        /* --- Títulos y Texto --- */
-        .game-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0 0 1rem 0;
-            line-height: 1.1;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #4dd0e1;
-            border-bottom: 2px solid #444;
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .game-summary {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #bdbdbd;
-        }
-        
-        /* --- Responsividad para móviles --- */
-        @media (max-width: 768px) {
-            body {
-                padding: 1.5rem;
-            }
-            .container {
-                flex-direction: column;
-            }
-            .cover-column {
-                flex-basis: 300px;
-            }
-            .content-column {
-                padding: 2rem;
-            }
-            .game-title {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <header>
+        <h1 class="main-header">Críticas de Videojuegos</h1>
+    </header>
+
     <main class="reviews-wrapper">
 
-        <!-- Crítica 1: The Legend of Zelda -->
-        <div class="container">
-            <div class="cover-column">
-                <img class="game-cover" src="https://m.media-amazon.com/images/M/MV5BMWQ0ZDhmODctMDhkYS00YTdhLWIxNDgtNjY0YWY1YTQ4ODBiXkEyXkFqcGc@._V1_.jpg" alt="Portada del videojuego The Legend of Zelda.">
-            </div>
-            <div class="content-column">
+        <div class="review-card">
+            <img class="game-cover" src="https://m.media-amazon.com/images/M/MV5BMWQ0ZDhmODctMDhkYS00YTdhLWIxNDgtNjY0YWY1YTQ4ODBiXkEyXkFqcGc@._V1_.jpg" alt="Portada del videojuego The Legend of Zelda.">
+            <div class="card-content">
                 <header>
-                    <h1 class="game-title">The Legend of Zelda</h1>
+                    <h2 class="game-title">The Legend of Zelda</h2>
                 </header>
-                <main>
-                    <section>
-                        <h2 class="section-title">Resumen del Videojuego</h2>
-                        <p class="game-summary">
-                            Lanzado en 1986, "The Legend of Zelda" es un revolucionario juego de acción y aventura que sentó las bases para el género. El jugador controla al joven héroe Link, quien debe explorar el vasto reino de Hyrule para encontrar los ocho fragmentos de un artefacto sagrado conocido como la Trifuerza de la Sabiduría. Solo con ella podrá rescatar a la Princesa Zelda y derrotar al malvado Ganon, restaurando la paz en el reino.
-                        </p>
-                    </section>
-                </main>
+                <section>
+                    <h3 class="section-title">Resumen</h3>
+                    <p class="game-summary">
+                        Lanzado en 1986, es un revolucionario juego que sentó las bases para el género de acción y aventura. El jugador controla a Link en su misión para rescatar a la Princesa Zelda y derrotar al malvado Ganon en el vasto reino de Hyrule.
+                    </p>
+                </section>
             </div>
         </div>
 
-        <!-- Crítica 2: The Last of Us -->
-        <div class="container">
-            <div class="cover-column">
-                <img class="game-cover" src="https://upload.wikimedia.org/wikipedia/en/4/46/The_Last_of_Us_Part_I_cover_art.jpg" alt="Portada del videojuego The Last of Us.">
-            </div>
-            <div class="content-column">
+        <div class="review-card">
+            <img class="game-cover" src="https://upload.wikimedia.org/wikipedia/en/4/46/The_Last_of_Us_Part_I_cover_art.jpg" alt="Portada del videojuego The Last of Us.">
+            <div class="card-content">
                 <header>
-                    <h1 class="game-title">The Last of Us</h1>
+                    <h2 class="game-title">The Last of Us</h2>
                 </header>
-                <main>
-                    <section>
-                        <h2 class="section-title">Resumen del Videojuego</h2>
-                        <p class="game-summary">
-                            Considerado una obra maestra narrativa, "The Last of Us" (2013) sumerge al jugador en un Estados Unidos post-apocalíptico devastado por una pandemia. La historia sigue a Joel, un curtido contrabandista, quien debe escoltar a Ellie, una valiente adolescente inmune al virus, a través del país. Su viaje se convierte en una profunda exploración sobre la supervivencia, la moralidad y los lazos humanos en un mundo brutal.
-                        </p>
-                    </section>
-                </main>
+                <section>
+                    <h3 class="section-title">Resumen</h3>
+                    <p class="game-summary">
+                        Una obra maestra narrativa que sigue a Joel y Ellie en un viaje a través de un Estados Unidos post-apocalíptico. Es una profunda exploración sobre la supervivencia, la moralidad y los lazos humanos en un mundo brutalmente hostil.
+                    </p>
+                </section>
             </div>
         </div>
 
-        <!-- Crítica 3: Red Dead Redemption 2 -->
-        <div class="container">
-            <div class="cover-column">
-                <img class="game-cover" src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="Portada del videojuego Red Dead Redemption 2.">
-            </div>
-            <div class="content-column">
+        <div class="review-card">
+            <img class="game-cover" src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="Portada del videojuego Red Dead Redemption 2.">
+            <div class="card-content">
                 <header>
-                    <h1 class="game-title">Red Dead Redemption 2</h1>
+                    <h2 class="game-title">Red Dead Redemption 2</h2>
                 </header>
-                <main>
-                    <section>
-                        <h2 class="section-title">Resumen del Videojuego</h2>
-                        <p class="game-summary">
-                            "Red Dead Redemption 2" (2018) es una épica del Salvaje Oeste que redefine los mundos abiertos con un nivel de detalle extraordinario. Ambientado en 1899, el juego narra la historia de Arthur Morgan, un forajido de la banda de Van der Linde, mientras lidia con la lealtad y el fin de una era. Su mundo vivo y su profunda narrativa lo convierten en una experiencia inmersiva e inolvidable.
-                        </p>
-                    </section>
-                </main>
+                <section>
+                    <h3 class="section-title">Resumen</h3>
+                    <p class="game-summary">
+                        Una épica del Salvaje Oeste que redefine los mundos abiertos con un nivel de detalle extraordinario. La historia de Arthur Morgan y la banda de Van der Linde es una trágica reflexión sobre la lealtad y el fin de una era.
+                    </p>
+                </section>
             </div>
         </div>
 
@@ -165,4 +64,3 @@
 
 </body>
 </html>
-
