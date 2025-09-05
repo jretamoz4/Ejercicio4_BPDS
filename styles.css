@@ -1,0 +1,106 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* --- Encabezado Principal --- */
+.main-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* --- Contenedor de la Grilla de Críticas --- */
+.reviews-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 2rem; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra la grilla en la página */
+}
+
+/* --- Tarjeta de cada Crítica --- */
+.review-card {
+    background-color: #262626;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para el formato de tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Portada del Juego --- */
+.game-cover {
+    width: 100%;
+    height: 350px; /* Altura ajustada para el formato vertical */
+    object-fit: cover;
+}
+
+/* --- Contenido de la Tarjeta --- */
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Asegura que el contenido ocupe el espacio disponible */
+}
+
+.game-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4dd0e1;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.game-summary {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bdbdbd;
+    flex-grow: 1;
+}
+
+/* --- Responsividad de la Grilla --- */
+/* Para tablets (2 columnas) */
+@media (max-width: 1024px) {
+    .reviews-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para móviles (1 columna) */
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+    .reviews-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .main-header {
+        font-size: 2.2rem;
+    }
+    .game-title {
+        font-size: 1.6rem;
+    }
+}
