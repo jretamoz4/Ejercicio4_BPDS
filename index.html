@@ -1,11 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crítica: The Legend of Zelda</title>
+    <style>
+        /* --- Estilos Generales --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro para temática de videojuegos */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Contenedor Principal --- */
+        .container {
+            max-width: 850px;
+            width: 100%;
+            background-color: #262626;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row; /* Cambiado a fila para layout de dos columnas */
+        }
+
+        /* --- Columna de la Portada --- */
+        .cover-column {
+            flex: 0 0 300px; /* Ancho fijo para la portada */
+        }
+        
+        .game-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* --- Columna de Contenido --- */
+        .content-column {
+            padding: 2.5rem;
+            flex-grow: 1;
+        }
+
+        /* --- Títulos y Texto --- */
+        .game-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 1rem 0;
+            line-height: 1.1;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4dd0e1; /* Un color de acento cian */
+            border-bottom: 2px solid #444;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-summary {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #bdbdbd;
+        }
+        
+        /* --- Responsividad para móviles --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+            }
+            .cover-column {
+                flex-basis: 300px; /* Altura fija para la imagen */
+            }
+            .content-column {
+                padding: 2rem;
+            }
+            .game-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        
+        <!-- Columna de la Imagen de Portada -->
+        <div class="cover-column">
+            <img class="game-cover" src="https://m.media-amazon.com/images/M/MV5BMWQ0ZDhmODctMDhkYS00YTdhLWIxNDgtNjY0YWY1YTQ4ODBiXkEyXkFqcGc@._V1_.jpg" alt="Portada del videojuego The Legend of Zelda.">
+        </div>
+
+        <!-- Columna del Contenido -->
+        <div class="content-column">
+            <header>
+                <!-- Nombre del videojuego -->
+                <h1 class="game-title">The Legend of Zelda</h1>
+            </header>
+            <main>
+                <!-- Resumen del videojuego -->
+                <section>
+                    <h2 class="section-title">Resumen del Videojuego</h2>
+                    <p class="game-summary">
+                    </p>
+                </section>
+            </main>
+        </div>
+
+    </div>
+
 </body>
 </html>
+
